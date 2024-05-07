@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Directory Project (Home Lab)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        p, ul, ol {
+            margin-bottom: 20px;
+        }
+
+        /* Container style */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        /* Definition list style */
+        dl {
+            margin-bottom: 20px;
+        }
+
+        dt {
+            font-weight: bold;
+        }
+
+        dd {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Active Directory Project (Home Lab)</h1>
+
+    <h2>Objectives</h2>
+    <ul>
+        <li>Learn Active Directory: Understand the fundamentals of Active Directory setup, administration, and how it functions within a domain environment.</li>
+        <li>Build a hands-on testing environment: Create a simulated environment to practice and experiment with Active Directory and related security concepts.</li>
+        <li>Gain IT experience: Build technical skills that are valuable for both blue team (defenders) and red team (attackers) scenarios.</li>
+    </ul>
+
+    <h2>Description</h2>
+    <p>Components:</p>
+    <dl>
+        <dt>Windows Server 2022:</dt>
+        <dd>Acts as the domain controller, hosting the Active Directory service.</dd>
+        <dt>Windows 10:</dt>
+        <dd>Represents a target machine within the domain that will be subject to attacks and monitoring.</dd>
+        <dt>Splunk:</dt>
+        <dd>A SIEM (Security Information and Event Management) system to collect and analyze logs from the Windows machines.</dd>
+        <dt>Sysmon:</dt>
+        <dd>A logging utility installed on the Windows machines to gather more detailed telemetry.</dd>
+        <dt>Kali Linux:</dt>
+        <dd>A penetration testing distribution used to simulate attacks against the lab environment.</dd>
+        <dt>Atomic Red Team:</dt>
+        <dd>A framework for testing attacks, providing pre-built attack scenarios.</dd>
+    </dl>
+
+    <h3>How They're Used</h3>
+    <ul>
+        <li><strong>Setup:</strong> VirtualBox is used to create virtual machines for each component, allowing the entire setup to run on a single computer.</li>
+        <li><strong>Active Directory:</strong> Windows Server 2022 is configured as a domain controller, managing users, computers, and groups in the simulated domain. The Windows 10 machine is joined to this domain.</li>
+        <li><strong>Logging:</strong> Sysmon is installed on the Windows machines to provide detailed event logs. Splunk is configured to receive these logs.</li>
+        <li><strong>Attack Simulation:</strong> Kali Linux is used to launch attacks against the domain environment (e.g., brute-force attacks). Atomic Red Team is used for more advanced attack scenarios.</li>
+        <li><strong>Defense and Analysis:</strong> Splunk gathers logs from the attack activity. You learn to analyze data in Splunk for security monitoring and incident response.</li>
+    </ul>
+</div>
+
+</body>
+</html>
