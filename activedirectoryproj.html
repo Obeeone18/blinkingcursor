@@ -51,6 +51,7 @@
 
 <div class="container">
     <h1>Active Directory Project (Home Lab)</h1>
+    <h3 style="font-size: 0.7em;">This project was inspired by and follows the guidelines provided by the MyDFIR YouTube channel in their video: <a href="https://www.youtube.com/watch?v=5OessbOgyEo">https://www.youtube.com/watch?v=5OessbOgyEo</a></h3>
 
     <h2>Objectives</h2>
     <ul>
@@ -66,6 +67,8 @@
         <dd>Acts as the domain controller, hosting the Active Directory service.</dd>
         <dt>Windows 10:</dt>
         <dd>Represents a target machine within the domain that will be subject to attacks and monitoring.</dd>
+        <dt>Windows 11:</dt>
+        <dd>Represents another target machine within the domain that will be subject to attacks and monitoring.</dd>
         <dt>Splunk:</dt>
         <dd>A SIEM (Security Information and Event Management) system to collect and analyze logs from the Windows machines.</dd>
         <dt>Sysmon:</dt>
@@ -79,7 +82,7 @@
     <h3>How They're Used</h3>
     <ul>
         <li><strong>Setup:</strong> VirtualBox is used to create virtual machines for each component, allowing the entire setup to run on a single computer.</li>
-        <li><strong>Active Directory:</strong> Windows Server 2022 is configured as a domain controller, managing users, computers, and groups in the simulated domain. The Windows 10 machine is joined to this domain.</li>
+        <li><strong>Active Directory:</strong> Windows Server 2022 is configured as a domain controller, managing users, computers, and groups in the simulated domain. The Windows 10 and 11 machine is joined to this domain.</li>
         <li><strong>Logging:</strong> Sysmon is installed on the Windows machines to provide detailed event logs. Splunk is configured to receive these logs.</li>
         <li><strong>Attack Simulation:</strong> Kali Linux is used to launch attacks against the domain environment (e.g., brute-force attacks). Atomic Red Team is used for more advanced attack scenarios.</li>
         <li><strong>Defense and Analysis:</strong> Splunk gathers logs from the attack activity. You learn to analyze data in Splunk for security monitoring and incident response.</li>
