@@ -83,17 +83,42 @@
         .projects ul li {
             margin-bottom: 10px;
         }
+        .explainer {
+            padding: 20px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+        .explainer h2 {
+            margin-top: 0;
+        }
         .explainer ul {
             list-style: none;
             padding-left: 0;
             margin-top: 20px;
         }
-        .explainer ul li {
+        .explainer li {
+            margin-bottom: 20px;
+        }
+        .explainer li strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .explainer li ul {
+            padding-left: 20px;
+        }
+        .explainer li ul li {
             margin-bottom: 10px;
         }
-        .explainer ul li a {
+        .explainer li ul li a {
             color: #007bff;
             text-decoration: none;
+        }
+        .explainer li ul li a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -186,15 +211,17 @@
     <div class="explainer">
         <h2>Explainer 📖</h2>
         <ul>
-            <li><Strong>NETWORKING BASICS 🌐</Strong>
+            <li>
+                <strong><a href="infographics.html">INFOGRAPHICS 📈</a></strong>
+            </li>
+            <li>
+                <strong>NETWORKING BASICS 🌐</strong>
                 <ul>
                     <li><a href="connectthedots.html">Connect the Dots: How Computers Talk to Each Other</a></li>
                     <li><a href="buildingbridges.html">The Internet: Building Bridges Across Networks</a></li>
                     <li><a href="networkneighborhood.html">Navigating Your Network Neighborhood</a></li>
                     <li><a href="understandingpings.html">Checking the Network Pulse: Understanding Pings</a></li>
                 </ul>
-            </li>
-            <li><a href="infographics.html"><strong>INFOGRAPHICS 📈</Strong></a></li>
             </li>
             <!-- Add more explainer items -->
         </ul>
