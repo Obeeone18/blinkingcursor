@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerability Assessment Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1c1c1c;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-family: 'Press Start 2P', cursive;
+            color: #8cff8c;
+            margin: 0;
+        }
+        .content {
+            padding: 20px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+        .content h2 {
+            margin-top: 0;
+        }
+        .content p {
+            line-height: 1.6;
+        }
+        .content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .content ul li {
+            margin-bottom: 10px;
+        }
+        .content ul li strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-link a {
+            font-family: 'Press Start 2P', cursive;
+            text-decoration: none;
+            background-color: #1c1c1c;
+            color: #8cff8c;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .table-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        }
+        table {
+        width: 80%;
+        border-collapse: collapse;
+        font-size: 1em;
+        font-family: Arial, sans-serif; /* Matching the page content font */
+        background-color: #fff;
+        color: #333;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        }
+        table thead tr {
+            background-color: #1c1c1c;
+            color: #8cff8c;
+            text-align: left;
+            font-weight: bold;
+        }
+        table th,
+        table td {
+            padding: 12px 15px;
+            text-align: center;
+        }
+        table tbody tr {
+            border-bottom: 1px solid #ddd;
+        }
+        table tbody tr:nth-of-type(even) {
+            background-color: #f9f9f9;
+        }
+        table tbody tr:last-of-type {
+            border-bottom: 2px solid #1c1c1c;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <h1>Vulnerability Assessment Project</h1>
+    </header>
+    <div class="content">
+        <h2>Activity Overview</h2>
+        <p>As part of the Google Cybersecurity course on Coursera, I completed a vulnerability assessment for a small business. This internal review process entailed evaluating the security systems to assess the risks associated with vulnerable information systems. Additionally, I developed a detailed remediation plan.</p>
+        
+        <h2>Scenario</h2>
+        <p>You are a newly hired cybersecurity analyst for an e-commerce company. The company stores information on a remote database server, since many of the employees work remotely from locations all around the world. Employees of the company regularly query, or request, data from the server to find potential customers. The database has been open to the public since the company's launch three years ago. As a cybersecurity professional, you recognize that keeping the database server open to the public is a serious vulnerability.</p>
+        <p>You are tasked with completing a vulnerability assessment of the situation to communicate the potential risks to decision makers at the company. You must create a written report that explains how the vulnerable server is a risk to business operations and how it can be secured.</p>
+
+        <h2>System Description</h2>
+        <p>The server hardware consists of a powerful CPU processor and 128GB of memory. It runs on the latest version of Linux operating system and hosts a MySQL database management system. It is configured with a stable network connection using IPv4 addresses and interacts with other servers on the network. Security measures include SSL/TLS encrypted connections.</p>
+
+        <h2>Scope</h2>
+        <p>The scope of this vulnerability assessment relates to the current access controls of the system. The assessment will cover a period of three months, from February 10 2024 to May 10 2024. NIST SP 800-30 Rev. 1 is used to guide the risk analysis of the information system.</p>
+
+        <h2>Purpose</h2>
+        <p>Securing the data on the company's server is crucial due to the regular queries and requests made by employees to find potential customers. The business relies on this data for its operations and requires that the data remains confidential, accurate, and readily available. If the server becomes disabled, employees' ability to identify potential customers would be severely impacted, negatively affecting the business.</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Threat Source</th>
+                        <th>Threat Event</th>
+                        <th>Likelihood</th>
+                        <th>Severity</th>
+                        <th>Risk</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Customer</td>
+                        <td>Alter/Delete critical information</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Employee</td>
+                        <td>Disrupt mission-critical operations</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Hacker</td>
+                        <td>Obtain sensitive information via exfiltration</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>9</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Approach</h2>
+        <p>The threat sources were evaluated based on the likelihood of compromising a publicly accessible database server. Customers manipulating or erasing crucial details for personal gain has a low probability, but severe consequences as it jeopardizes the database's trustworthiness. Employees may also pose a risk, as insider threats can disrupt operations. The most significant threat comes from hackers due to the database's public accessibility.</p>
+
+        <h2>Remediation Strategy</h2>
+        <p>To safeguard the database server, authentication, authorization, and accounting mechanisms are implemented. This involves using robust passwords, role-based access controls, and multi-factor authentication to limit user privileges. Data in motion is encrypted using TLS, replacing SSL. To protect against unauthorized access from random internet users, IP allow-listing is utilized, restricting connections to the database server to corporate offices.</p>
+
+        <div class="back-link">
+            <a href="index.html">Home</a>
+        </div>
+    </div>
+</body>
+</html>
