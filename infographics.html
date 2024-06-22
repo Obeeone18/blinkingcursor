@@ -42,23 +42,30 @@
         }
         .gallery h2 {
             margin-top: 0;
-        }
+         }
+
         .thumbnails {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
+
         .thumbnails img {
-            width: 200px;
+            max-width: 200px;
+            max-height: 300px; /* Ensures that images fit within a max height */
+            width: auto;
             height: auto;
             margin: 10px;
             border: 1px solid #ddd;
             cursor: pointer;
             transition: transform 0.3s;
+            object-fit: contain; /* Ensures images are contained within the given max-width and max-height */
         }
+
         .thumbnails img:hover {
             transform: scale(1.05);
         }
+        
         .lightbox {
             display: none;
             position: fixed;
